@@ -1,0 +1,29 @@
+{
+  "form": {
+    "firstNameLabel": "Prénom",
+    "lastNameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Nouveau mot de passe",
+    "passwordHint": "Laissez vide pour conserver votre mot de passe actuel.",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "submitUpdate": "Enregistrer les modifications"
+  },
+  "validation": {
+    "firstNameRequired": "Le prénom est requis",
+    "lastNameRequired": "Le nom est requis",
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Saisissez une adresse e-mail valide",
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères",
+    "passwordMismatch": "Les mots de passe ne correspondent pas."
+  },
+  "toast": {
+    "updateSuccess": "Profil mis à jour avec succès"
+  },
+  "errors": {
+    "loadFailed": "Impossible de charger votre profil. Veuillez réessayer.",
+    "generic": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "roles": {
+    "trainer": "Formateur"
+  }
+}

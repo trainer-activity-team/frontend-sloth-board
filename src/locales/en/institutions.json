@@ -1,0 +1,52 @@
+{
+  "list": {
+    "searchPlaceholder": "Search institutions…",
+    "filterAll": "All declarations",
+    "filterRequired": "Requires declaration",
+    "filterNotRequired": "No declaration required",
+    "addButton": "Add institution",
+    "columns": {
+      "name": "Name",
+      "address": "Address",
+      "color": "Color",
+      "requiresDeclaration": "Declaration"
+    },
+    "declarationYes": "Required",
+    "declarationNo": "Not required",
+    "emptyTitle": "No institutions yet",
+    "emptyDescription": "Create your first institution to get started.",
+    "emptyAction": "Add institution",
+    "noResultsTitle": "No matching institutions",
+    "noResultsDescription": "Try adjusting your search or filter."
+  },
+  "form": {
+    "nameLabel": "Name",
+    "addressLabel": "Address",
+    "colorLabel": "Color",
+    "requiresDeclarationLabel": "Requires declaration",
+    "submitCreate": "Create institution",
+    "submitUpdate": "Save changes",
+    "cancel": "Cancel",
+    "dangerZoneTitle": "Danger zone",
+    "dangerZoneDescription": "Deleting this institution is permanent and cannot be undone.",
+    "deleteButton": "Delete institution",
+    "deleteConfirm": "Are you sure you want to delete this institution?",
+    "deleteConfirmButton": "Yes, delete",
+    "deleteCancelButton": "Cancel"
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "addressRequired": "Address is required",
+    "colorInvalid": "Enter a valid hex color (e.g. #3B82F6)"
+  },
+  "toast": {
+    "createSuccess": "Institution created successfully",
+    "updateSuccess": "Institution updated successfully",
+    "deleteSuccess": "Institution deleted successfully"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "loadFailed": "Failed to load institutions",
+    "loadOneFailed": "Failed to load institution"
+  }
+}

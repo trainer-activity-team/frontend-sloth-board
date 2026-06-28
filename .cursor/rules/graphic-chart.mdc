@@ -1,0 +1,120 @@
+---
+description: Graphic charter — colors, typography, Tailwind theme tokens, and UI rules
+alwaysApply: true
+---
+
+# Graphic Charter
+
+Visual identity for the ERP app. This rule is the source of truth for styling.
+
+## Enforcement
+
+- Brand colors and typography must come from `@theme` tokens in `src/index.css`.
+- Use semantic Tailwind classes (`bg-background`, `bg-surface`, `text-foreground`, `text-muted`, `bg-primary`, `border-border`) — not raw hex or rgb in components.
+- Forbidden for brand elements: hardcoded `#…`, `rgb(…)`, or arbitrary Tailwind colors (`bg-[#1a2b3c]`).
+- Exception: dynamic institution colors from the API may use inline `style`.
+- Reuse the same button, input, card, and badge patterns across pages.
+- Mobile-first layouts with Tailwind responsive prefixes.
+
+## Typography
+
+- Font: **Inter** (`--font-sans`)
+- Titles: `font-semibold`
+- Body: `font-normal`
+- Labels: `text-sm uppercase tracking-wide`
+
+## Tailwind Theme Tokens
+
+Map all charter values into `src/index.css` via Tailwind v4 `@theme`. Dark theme is the default; light theme overrides shared tokens.
+
+```css
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Accent — shared across themes */
+  --color-primary: #117964;
+  --color-primary-hover: #1abc9c;
+  --color-on-primary: #ffffff;
+
+  /* Semantic — dark (default) */
+  --color-background: #020f1f;
+  --color-surface: #0f2b44;
+  --color-surface-hover: #163754;
+  --color-border: #274661;
+  --color-foreground: #e6edf3;
+  --color-muted: #a8bccc;
+  --color-disabled: #60758c;
+
+  /* Status — shared */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Charts — dark */
+  --color-chart-1: #1abc9c;
+  --color-chart-2: #117964;
+  --color-chart-3: #5dade2;
+}
+
+/* Light theme overrides */
+.light,
+[data-theme="light"] {
+  @theme {
+    --color-background: #f5f8fb;
+    --color-surface: #ffffff;
+    --color-surface-hover: #eef3f7;
+    --color-border: #d8e2ec;
+    --color-foreground: #1e293b;
+    --color-muted: #64748b;
+    --color-disabled: #94a3b8;
+    --color-chart-3: #60a5fa;
+  }
+}
+```
+
+| Token | Dark | Light | Tailwind usage |
+|-------|------|-------|----------------|
+| Background | `#020F1F` Deep Navy | `#F5F8FB` Light Gray | `bg-background` |
+| Surface / Cards | `#0F2B44` Navy Surface | `#FFFFFF` White | `bg-surface` |
+| Surface hover | `#163754` Elevated | `#EEF3F7` Soft Gray | `bg-surface-hover` |
+| Accent | `#117964` Emerald | `#117964` Emerald | `bg-primary`, `text-primary` |
+| Accent hover | `#1ABC9C` Emerald Light | `#1ABC9C` Emerald Light | `hover:bg-primary-hover` |
+| On primary | `#FFFFFF` White | `#FFFFFF` White | `text-on-primary` |
+| Border | `#274661` Soft Border | `#D8E2EC` Light Border | `border-border` |
+| Text | `#E6EDF3` Off White | `#1E293B` Dark Slate | `text-foreground` |
+| Text muted | `#A8BCCC` Muted Blue | `#64748B` Slate Gray | `text-muted` |
+| Disabled | `#60758C` | `#94A3B8` | `text-disabled` |
+| Success | `#22C55E` | `#22C55E` | `text-success`, `bg-success` |
+| Warning | `#F59E0B` | `#F59E0B` | `text-warning`, `bg-warning` |
+| Danger | `#EF4444` | `#EF4444` | `text-danger`, `bg-danger` |
+
+Chart series: `chart-1` `#1ABC9C`, `chart-2` `#117964`, `chart-3` `#5DADE2` (dark) / `#60A5FA` (light).
+
+## Logo
+
+- Icon: calendar (planning / coaching / suivi) — `text-primary-hover` (`#1ABC9C`)
+- Text primary: `text-foreground` (dark: `#E6EDF3`, light: `#1E293B`)
+- Text secondary: `text-muted` (dark: `#A8BCCC`, light: `#64748B`)
+
+## UI Rules
+
+- Dark UI by default — never pure black (`#000000`)
+- Single accent color (emerald family)
+- Soft contrasts, simple professional design
+- Rounded corners: `rounded-xl`
+- Light shadows only — no heavy drop shadows
+
+## ERP Component Mapping
+
+| Element | Dark | Light | Class |
+|---------|------|-------|-------|
+| Sidebar | Deep Navy | White | `bg-background` / `bg-surface` |
+| KPI cards | Navy Surface | White | `bg-surface` |
+| Global background | Deep Navy | Light Gray | `bg-background` |
+| Active button | Emerald | Emerald | `bg-primary` |
+| Button text | White | White | `text-on-primary` |
+| Button hover | Emerald Light | Emerald Light | `hover:bg-primary-hover` |
+| Table | Navy Surface | White | `bg-surface` |
+| Row hover | Elevated Surface | Soft Gray | `hover:bg-surface-hover` |

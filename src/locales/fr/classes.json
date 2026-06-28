@@ -1,0 +1,56 @@
+{
+  "list": {
+    "searchPlaceholder": "Rechercher des classes…",
+    "filterAll": "Tous les établissements",
+    "addButton": "Ajouter une classe",
+    "columns": {
+      "name": "Nom",
+      "classLevel": "Niveau",
+      "studentCount": "Élèves",
+      "institution": "Établissement",
+      "teacher": "Enseignant"
+    },
+    "emptyTitle": "Aucune classe",
+    "emptyDescription": "Créez votre première classe pour commencer.",
+    "emptyAction": "Ajouter une classe",
+    "noResultsTitle": "Aucune classe correspondante",
+    "noResultsDescription": "Essayez de modifier votre recherche ou votre filtre."
+  },
+  "form": {
+    "nameLabel": "Nom",
+    "classLevelLabel": "Niveau",
+    "studentCountLabel": "Nombre d'élèves",
+    "institutionLabel": "Établissement",
+    "teacherLabel": "Enseignant",
+    "institutionPlaceholder": "Sélectionner un établissement",
+    "teacherPlaceholder": "Sélectionner un enseignant",
+    "selectsLoading": "Chargement des options…",
+    "submitCreate": "Créer la classe",
+    "submitUpdate": "Enregistrer",
+    "cancel": "Annuler",
+    "dangerZoneTitle": "Zone de danger",
+    "dangerZoneDescription": "La suppression de cette classe est définitive et irréversible.",
+    "deleteButton": "Supprimer la classe",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette classe ?",
+    "deleteConfirmButton": "Oui, supprimer",
+    "deleteCancelButton": "Annuler"
+  },
+  "validation": {
+    "nameRequired": "Le nom est requis",
+    "classLevelRequired": "Le niveau est requis",
+    "studentCountInvalid": "Entrez un nombre d'élèves valide",
+    "studentCountMin": "Le nombre d'élèves doit être supérieur ou égal à 0",
+    "institutionRequired": "L'établissement est requis",
+    "teacherRequired": "L'enseignant est requis"
+  },
+  "toast": {
+    "createSuccess": "Classe créée avec succès",
+    "updateSuccess": "Classe mise à jour avec succès",
+    "deleteSuccess": "Classe supprimée avec succès"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "loadFailed": "Échec du chargement des classes",
+    "loadOneFailed": "Échec du chargement de la classe"
+  }
+}

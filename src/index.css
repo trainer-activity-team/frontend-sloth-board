@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Accent — shared across themes */
+  --color-primary: #117964;
+  --color-primary-hover: #1abc9c;
+  --color-on-primary: #ffffff;
+
+  /* Semantic — driven by runtime CSS variables */
+  --color-background: var(--theme-background);
+  --color-surface: var(--theme-surface);
+  --color-surface-hover: var(--theme-surface-hover);
+  --color-border: var(--theme-border);
+  --color-foreground: var(--theme-foreground);
+  --color-muted: var(--theme-muted);
+  --color-disabled: var(--theme-disabled);
+
+  /* Status — shared */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Charts */
+  --color-chart-1: #1abc9c;
+  --color-chart-2: #117964;
+  --color-chart-3: var(--theme-chart-3);
+}
+
+/* Dark theme (default) */
+:root {
+  --theme-background: #020f1f;
+  --theme-surface: #0f2b44;
+  --theme-surface-hover: #163754;
+  --theme-border: #274661;
+  --theme-foreground: #e6edf3;
+  --theme-muted: #a8bccc;
+  --theme-disabled: #60758c;
+  --theme-chart-3: #5dade2;
+}
+
+/* Light theme overrides */
+.light,
+[data-theme="light"] {
+  --theme-background: #f5f8fb;
+  --theme-surface: #ffffff;
+  --theme-surface-hover: #eef3f7;
+  --theme-border: #d8e2ec;
+  --theme-foreground: #1e293b;
+  --theme-muted: #64748b;
+  --theme-disabled: #94a3b8;
+  --theme-chart-3: #60a5fa;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}

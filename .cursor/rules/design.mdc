@@ -1,0 +1,54 @@
+---
+alwaysApply: true
+---
+# Frontend Stack
+
+Mandated libraries — do not substitute alternatives without explicit approval.
+Implementation patterns (structure, components, TypeScript) live in `coding-practices.mdc`.
+
+## Styling
+
+- **Tailwind CSS** for all styling — no CSS modules, styled-components, or ad-hoc inline styles.
+- Charter colors and typography — see `graphic-chart.mdc`.
+
+## Routing
+
+- **React Router** for client-side navigation.
+- Central router in `src/routes/`; use `<Link>` and `useNavigate` for in-app navigation.
+
+## Data Fetching
+
+- **TanStack React Query** for server state (queries, mutations, cache, invalidation).
+- API client and query keys in `src/lib/`.
+
+## Forms
+
+- **React Hook Form** for all forms.
+- Use `register` or `Controller`; validate with a schema (e.g. Zod).
+
+## UI Feedback
+
+- **React Toastify** — toasts for mutation success and error feedback.
+- **React Loader Spinner** — loading indicators tied to query or form pending state.
+
+## React Ecosystem Tools
+
+Use the right library for each UI need — do not reinvent or add duplicates.
+
+| Need | Library | Usage |
+|------|---------|-------|
+| Icons | React Icons | Import from `react-icons/*`; never inline SVGs for standard icons |
+| Pagination | React Pagination | List pages with server-side or client-side paging |
+| Select | React Select | Dropdowns with search or multi-select |
+| Date | React Datepicker | Date fields in forms |
+| Time | React Timepicker | Time fields in forms |
+
+Wrap third-party components in a local UI primitive when used in more than one place (e.g. `components/ui/Select.tsx` around React Select).
+
+## Checklist When Adding a Feature
+
+- [ ] Route added in central router
+- [ ] Data fetched via React Query with loading / error / empty states
+- [ ] Forms use React Hook Form
+- [ ] Icons from React Icons; dates/times/selects from the table above
+- [ ] Feedback via Toastify and Loader Spinner

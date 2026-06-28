@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "institutions": "Institutions",
+    "classes": "Classes"
+  },
+  "header": {
+    "searchPlaceholder": "Search…",
+    "role": "Trainer",
+    "logout": "Sign out",
+    "settings": "Settings"
+  },
+  "pages": {
+    "dashboard": "Dashboard",
+    "institutions": "Institutions",
+    "institutionNew": "New institution",
+    "institutionEdit": "Edit institution",
+    "classes": "Classes",
+    "classNew": "New class",
+    "classEdit": "Edit class",
+    "profile": "Profile"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  }
+}

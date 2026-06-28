@@ -1,0 +1,56 @@
+{
+  "list": {
+    "searchPlaceholder": "Search classes…",
+    "filterAll": "All institutions",
+    "addButton": "Add class",
+    "columns": {
+      "name": "Name",
+      "classLevel": "Level",
+      "studentCount": "Students",
+      "institution": "Institution",
+      "teacher": "Teacher"
+    },
+    "emptyTitle": "No classes yet",
+    "emptyDescription": "Create your first class to get started.",
+    "emptyAction": "Add class",
+    "noResultsTitle": "No matching classes",
+    "noResultsDescription": "Try adjusting your search or filter."
+  },
+  "form": {
+    "nameLabel": "Name",
+    "classLevelLabel": "Level",
+    "studentCountLabel": "Student count",
+    "institutionLabel": "Institution",
+    "teacherLabel": "Teacher",
+    "institutionPlaceholder": "Select an institution",
+    "teacherPlaceholder": "Select a teacher",
+    "selectsLoading": "Loading options…",
+    "submitCreate": "Create class",
+    "submitUpdate": "Save changes",
+    "cancel": "Cancel",
+    "dangerZoneTitle": "Danger zone",
+    "dangerZoneDescription": "Deleting this class is permanent and cannot be undone.",
+    "deleteButton": "Delete class",
+    "deleteConfirm": "Are you sure you want to delete this class?",
+    "deleteConfirmButton": "Yes, delete",
+    "deleteCancelButton": "Cancel"
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "classLevelRequired": "Level is required",
+    "studentCountInvalid": "Enter a valid student count",
+    "studentCountMin": "Student count must be 0 or greater",
+    "institutionRequired": "Institution is required",
+    "teacherRequired": "Teacher is required"
+  },
+  "toast": {
+    "createSuccess": "Class created successfully",
+    "updateSuccess": "Class updated successfully",
+    "deleteSuccess": "Class deleted successfully"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "loadFailed": "Failed to load classes",
+    "loadOneFailed": "Failed to load class"
+  }
+}

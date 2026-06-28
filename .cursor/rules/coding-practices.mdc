@@ -1,0 +1,87 @@
+---
+alwaysApply: true
+---
+# Coding Practices
+
+General standards for all frontend code in this project.
+
+## TypeScript
+
+- Write all source in TypeScript — no plain JavaScript files.
+- Type component props explicitly; export prop types when a component is shared.
+- Avoid `any`; use `unknown` and narrow when the type is uncertain.
+- Colocate types with the feature (`types.ts`) or next to the component when small.
+
+## React
+
+- Functional components only — no class components.
+- One component per file; name the file after the component (`UserCard.tsx`).
+- Keep components small and focused — if a file grows past ~150 lines, split it.
+- Extract reusable logic into custom hooks (`useXxx.ts` in `hooks/`).
+- Prefer composition over prop drilling; lift state only when multiple siblings need it.
+
+## Reusable Components
+
+Build a shared UI layer under `src/components/` — do not duplicate markup across pages.
+
+| Layer | Location | Purpose |
+|-------|----------|---------|
+| UI primitives | `components/ui/` | Button, Input, Card, Badge, Modal — generic, no business logic |
+| Shared | `components/` | App-wide pieces used across features (layout, nav, empty states) |
+| Feature | `features/<name>/components/` | Components tied to one domain |
+
+Rules:
+- Pages compose shared and feature components — pages should not contain raw form markup or repeated Tailwind blocks.
+- UI primitives accept `className` for extension; expose variants via props, not copy-paste.
+- When the same JSX appears twice, extract a component.
+
+## Project Structure
+
+```
+src/
+  components/ui/     # reusable primitives
+  components/        # shared app components
+  features/          # domain modules (components, hooks, api)
+  hooks/             # global custom hooks
+  pages/             # route-level components (thin)
+  lib/               # api client, utils, query keys
+  routes/            # React Router config
+```
+
+Pages are thin: they wire data (React Query) and render feature components.
+
+## Styling
+
+- Use **Tailwind CSS** utility classes — see `design.mdc`.
+- Brand tokens come from the graphic charter — see `graphic-chart.mdc`.
+- No inline `style` except for dynamic values from data (e.g. institution color).
+
+## API & Async State
+
+Every data-driven view must handle all three states explicitly:
+
+| State | Pattern |
+|-------|---------|
+| Loading | `<Loader />` from React Loader Spinner |
+| Error | User-friendly message + retry when possible |
+| Success | Render data; show empty state when the list is empty |
+
+With React Query:
+
+```tsx
+const { data, isPending, isError, error, refetch } = useQuery({ ... })
+
+if (isPending) return <Loader />
+if (isError) return <ErrorMessage error={error} onRetry={refetch} />
+if (!data?.length) return <EmptyState />
+return <ItemList items={data} />
+```
+
+- Mutations: use `onSuccess` / `onError` with React Toastify — not `alert()`.
+- Do not fetch with raw `useEffect` + `fetch` when React Query fits.
+
+## Production-Ready Code
+
+- Ship code safe to run in production — no debug UI, commented-out blocks, or dev-only shortcuts.
+- Do not leave `console.log` for debugging.
+- Handle errors explicitly; do not swallow failures silently.

@@ -1,0 +1,52 @@
+{
+  "list": {
+    "searchPlaceholder": "Rechercher un établissement…",
+    "filterAll": "Toutes les déclarations",
+    "filterRequired": "Déclaration requise",
+    "filterNotRequired": "Sans déclaration",
+    "addButton": "Ajouter un établissement",
+    "columns": {
+      "name": "Nom",
+      "address": "Adresse",
+      "color": "Couleur",
+      "requiresDeclaration": "Déclaration"
+    },
+    "declarationYes": "Requise",
+    "declarationNo": "Non requise",
+    "emptyTitle": "Aucun établissement",
+    "emptyDescription": "Créez votre premier établissement pour commencer.",
+    "emptyAction": "Ajouter un établissement",
+    "noResultsTitle": "Aucun résultat",
+    "noResultsDescription": "Modifiez votre recherche ou votre filtre."
+  },
+  "form": {
+    "nameLabel": "Nom",
+    "addressLabel": "Adresse",
+    "colorLabel": "Couleur",
+    "requiresDeclarationLabel": "Déclaration requise",
+    "submitCreate": "Créer l'établissement",
+    "submitUpdate": "Enregistrer",
+    "cancel": "Annuler",
+    "dangerZoneTitle": "Zone de danger",
+    "dangerZoneDescription": "La suppression de cet établissement est définitive et irréversible.",
+    "deleteButton": "Supprimer l'établissement",
+    "deleteConfirm": "Voulez-vous vraiment supprimer cet établissement ?",
+    "deleteConfirmButton": "Oui, supprimer",
+    "deleteCancelButton": "Annuler"
+  },
+  "validation": {
+    "nameRequired": "Le nom est requis",
+    "addressRequired": "L'adresse est requise",
+    "colorInvalid": "Entrez une couleur hex valide (ex. #3B82F6)"
+  },
+  "toast": {
+    "createSuccess": "Établissement créé avec succès",
+    "updateSuccess": "Établissement mis à jour avec succès",
+    "deleteSuccess": "Établissement supprimé avec succès"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "loadFailed": "Impossible de charger les établissements",
+    "loadOneFailed": "Impossible de charger l'établissement"
+  }
+}

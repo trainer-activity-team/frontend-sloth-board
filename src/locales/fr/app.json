@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "institutions": "Établissements",
+    "classes": "Classes"
+  },
+  "header": {
+    "searchPlaceholder": "Rechercher…",
+    "role": "Formateur",
+    "logout": "Se déconnecter",
+    "settings": "Paramètres"
+  },
+  "pages": {
+    "dashboard": "Tableau de bord",
+    "institutions": "Établissements",
+    "institutionNew": "Nouvel établissement",
+    "institutionEdit": "Modifier l'établissement",
+    "classes": "Classes",
+    "classNew": "Nouvelle classe",
+    "classEdit": "Modifier la classe",
+    "profile": "Mon profil"
+  },
+  "theme": {
+    "light": "Mode clair",
+    "dark": "Mode sombre"
+  }
+}
