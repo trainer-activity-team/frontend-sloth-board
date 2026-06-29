@@ -1,4 +1,4 @@
-import { FiBookOpen, FiBriefcase, FiGrid } from 'react-icons/fi'
+import { FiBookOpen, FiBriefcase, FiFileText, FiGrid } from 'react-icons/fi'
 import { ROUTES } from './routes'
 
 export const navItems = [
@@ -16,5 +16,10 @@ export const navItems = [
     to: ROUTES.CLASSES,
     labelKey: 'nav.classes',
     icon: FiBookOpen,
+  },
+  {
+    to: ROUTES.CONTRACTS,
+    labelKey: 'nav.contracts',
+    icon: FiFileText,
   },
 ] as const

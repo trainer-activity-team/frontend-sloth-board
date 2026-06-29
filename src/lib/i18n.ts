@@ -7,6 +7,8 @@ import authEn from '../locales/en/auth.json'
 import authFr from '../locales/fr/auth.json'
 import classesEn from '../locales/en/classes.json'
 import classesFr from '../locales/fr/classes.json'
+import contractsEn from '../locales/en/contracts.json'
+import contractsFr from '../locales/fr/contracts.json'
 import institutionsEn from '../locales/en/institutions.json'
 import institutionsFr from '../locales/fr/institutions.json'
 import profileEn from '../locales/en/profile.json'
@@ -25,8 +27,22 @@ function getInitialLanguage(): string {
 
 void i18n.use(initReactI18next).init({
   resources: {
-    fr: { auth: authFr, app: appFr, institutions: institutionsFr, classes: classesFr, profile: profileFr },
-    en: { auth: authEn, app: appEn, institutions: institutionsEn, classes: classesEn, profile: profileEn },
+    fr: {
+      auth: authFr,
+      app: appFr,
+      institutions: institutionsFr,
+      classes: classesFr,
+      contracts: contractsFr,
+      profile: profileFr,
+    },
+    en: {
+      auth: authEn,
+      app: appEn,
+      institutions: institutionsEn,
+      classes: classesEn,
+      contracts: contractsEn,
+      profile: profileEn,
+    },
   },
   lng: getInitialLanguage(),
   fallbackLng: 'en',

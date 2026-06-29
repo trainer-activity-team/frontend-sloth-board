@@ -2,7 +2,8 @@
   "nav": {
     "dashboard": "Tableau de bord",
     "institutions": "Établissements",
-    "classes": "Classes"
+    "classes": "Classes",
+    "contracts": "Contrats"
   },
   "header": {
     "searchPlaceholder": "Rechercher…",
@@ -18,6 +19,9 @@
     "classes": "Classes",
     "classNew": "Nouvelle classe",
     "classEdit": "Modifier la classe",
+    "contracts": "Contrats",
+    "contractNew": "Nouveau contrat",
+    "contractEdit": "Modifier le contrat",
     "profile": "Mon profil"
   },
   "theme": {

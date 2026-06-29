@@ -4,6 +4,8 @@ import { AuthLayout } from '../components/AuthLayout'
 import { ROUTES } from '../lib/routes'
 import { ClassFormPage } from '../pages/ClassFormPage'
 import { ClassesPage } from '../pages/ClassesPage'
+import { ContractFormPage } from '../pages/ContractFormPage'
+import { ContractsPage } from '../pages/ContractsPage'
 import { DashboardPage } from '../pages/DashboardPage'
 import { InstitutionFormPage } from '../pages/InstitutionFormPage'
 import { InstitutionsPage } from '../pages/InstitutionsPage'
@@ -39,6 +41,9 @@ export const router = createBrowserRouter([
           { path: ROUTES.CLASSES, element: <ClassesPage /> },
           { path: ROUTES.CLASS_NEW, element: <ClassFormPage /> },
           { path: ROUTES.CLASS_DETAIL, element: <ClassFormPage /> },
+          { path: ROUTES.CONTRACTS, element: <ContractsPage /> },
+          { path: ROUTES.CONTRACT_NEW, element: <ContractFormPage /> },
+          { path: ROUTES.CONTRACT_DETAIL, element: <ContractFormPage /> },
           { path: ROUTES.PROFILE, element: <ProfilePage /> },
           { path: '/', element: <Navigate to={ROUTES.DASHBOARD} replace /> },
         ],

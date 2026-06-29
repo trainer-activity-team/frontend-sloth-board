@@ -2,7 +2,8 @@
   "nav": {
     "dashboard": "Dashboard",
     "institutions": "Institutions",
-    "classes": "Classes"
+    "classes": "Classes",
+    "contracts": "Contracts"
   },
   "header": {
     "searchPlaceholder": "Search…",
@@ -18,6 +19,9 @@
     "classes": "Classes",
     "classNew": "New class",
     "classEdit": "Edit class",
+    "contracts": "Contracts",
+    "contractNew": "New contract",
+    "contractEdit": "Edit contract",
     "profile": "Profile"
   },
   "theme": {

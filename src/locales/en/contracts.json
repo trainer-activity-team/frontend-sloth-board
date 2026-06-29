@@ -1,0 +1,64 @@
+{
+  "list": {
+    "searchPlaceholder": "Search contracts…",
+    "filterAllInstitutions": "All institutions",
+    "filterAllPricingModes": "All pricing modes",
+    "addButton": "Add contract",
+    "columns": {
+      "contractNumber": "Number",
+      "institution": "Institution",
+      "pricingMode": "Mode",
+      "period": "Period",
+      "hourlyVolumePlanned": "Planned volume",
+      "unitPrice": "Unit price"
+    },
+    "emptyTitle": "No contracts yet",
+    "emptyDescription": "Create your first contract to get started.",
+    "emptyAction": "Add contract",
+    "noResultsTitle": "No matching contracts",
+    "noResultsDescription": "Try adjusting your search or filters."
+  },
+  "form": {
+    "institutionLabel": "Institution",
+    "pricingModeLabel": "Pricing mode",
+    "contractNumberLabel": "Contract number",
+    "startDateLabel": "Start date",
+    "endDateLabel": "End date",
+    "hourlyVolumePlannedLabel": "Planned hourly volume",
+    "unitPriceLabel": "Unit price",
+    "institutionPlaceholder": "Select an institution",
+    "pricingModePlaceholder": "Select a pricing mode",
+    "submitCreate": "Create contract",
+    "submitUpdate": "Save changes",
+    "cancel": "Cancel",
+    "dangerZoneTitle": "Danger zone",
+    "dangerZoneDescription": "Deleting this contract is permanent and cannot be undone.",
+    "deleteButton": "Delete contract",
+    "deleteConfirm": "Are you sure you want to delete this contract?",
+    "deleteConfirmButton": "Yes, delete",
+    "deleteCancelButton": "Cancel"
+  },
+  "validation": {
+    "institutionRequired": "Institution is required",
+    "pricingModeRequired": "Pricing mode is required",
+    "contractNumberRequired": "Contract number is required",
+    "startDateRequired": "Start date is required",
+    "startDateInvalid": "Enter a valid start date",
+    "endDateRequired": "End date is required",
+    "endDateInvalid": "Enter a valid end date",
+    "endDateAfterStart": "End date must be after or equal to start date",
+    "hourlyVolumePlannedMin": "Planned hourly volume must be 0 or greater",
+    "unitPriceMin": "Unit price must be 0 or greater"
+  },
+  "toast": {
+    "createSuccess": "Contract created successfully",
+    "updateSuccess": "Contract updated successfully",
+    "deleteSuccess": "Contract deleted successfully"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "loadFailed": "Failed to load contracts",
+    "loadOneFailed": "Failed to load contract",
+    "loadOptionsFailed": "Failed to load options"
+  }
+}

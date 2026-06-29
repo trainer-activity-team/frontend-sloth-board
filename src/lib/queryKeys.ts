@@ -18,4 +18,14 @@ export const queryKeys = {
     lists: () => [...queryKeys.classes.all, 'list'] as const,
     detail: (id: number) => [...queryKeys.classes.all, 'detail', id] as const,
   },
+  contracts: {
+    all: ['contracts'] as const,
+    lists: () => [...queryKeys.contracts.all, 'list'] as const,
+    detail: (id: number) => [...queryKeys.contracts.all, 'detail', id] as const,
+  },
+  pricingModes: {
+    all: ['pricingModes'] as const,
+    lists: () => [...queryKeys.pricingModes.all, 'list'] as const,
+    detail: (id: number) => [...queryKeys.pricingModes.all, 'detail', id] as const,
+  },
 } as const

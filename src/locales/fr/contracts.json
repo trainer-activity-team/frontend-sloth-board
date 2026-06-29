@@ -1,0 +1,64 @@
+{
+  "list": {
+    "searchPlaceholder": "Rechercher des contrats…",
+    "filterAllInstitutions": "Tous les établissements",
+    "filterAllPricingModes": "Tous les modes",
+    "addButton": "Ajouter un contrat",
+    "columns": {
+      "contractNumber": "Numéro",
+      "institution": "Établissement",
+      "pricingMode": "Mode",
+      "period": "Période",
+      "hourlyVolumePlanned": "Volume prévu",
+      "unitPrice": "Prix unitaire"
+    },
+    "emptyTitle": "Aucun contrat",
+    "emptyDescription": "Créez votre premier contrat pour commencer.",
+    "emptyAction": "Ajouter un contrat",
+    "noResultsTitle": "Aucun contrat correspondant",
+    "noResultsDescription": "Essayez de modifier votre recherche ou vos filtres."
+  },
+  "form": {
+    "institutionLabel": "Établissement",
+    "pricingModeLabel": "Mode de tarification",
+    "contractNumberLabel": "Numéro de contrat",
+    "startDateLabel": "Date de début",
+    "endDateLabel": "Date de fin",
+    "hourlyVolumePlannedLabel": "Volume horaire prévu",
+    "unitPriceLabel": "Prix unitaire",
+    "institutionPlaceholder": "Sélectionner un établissement",
+    "pricingModePlaceholder": "Sélectionner un mode de tarification",
+    "submitCreate": "Créer le contrat",
+    "submitUpdate": "Enregistrer",
+    "cancel": "Annuler",
+    "dangerZoneTitle": "Zone de danger",
+    "dangerZoneDescription": "La suppression de ce contrat est définitive et irréversible.",
+    "deleteButton": "Supprimer le contrat",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce contrat ?",
+    "deleteConfirmButton": "Oui, supprimer",
+    "deleteCancelButton": "Annuler"
+  },
+  "validation": {
+    "institutionRequired": "L'établissement est requis",
+    "pricingModeRequired": "Le mode de tarification est requis",
+    "contractNumberRequired": "Le numéro de contrat est requis",
+    "startDateRequired": "La date de début est requise",
+    "startDateInvalid": "Entrez une date de début valide",
+    "endDateRequired": "La date de fin est requise",
+    "endDateInvalid": "Entrez une date de fin valide",
+    "endDateAfterStart": "La date de fin doit être postérieure ou égale à la date de début",
+    "hourlyVolumePlannedMin": "Le volume horaire prévu doit être supérieur ou égal à 0",
+    "unitPriceMin": "Le prix unitaire doit être supérieur ou égal à 0"
+  },
+  "toast": {
+    "createSuccess": "Contrat créé avec succès",
+    "updateSuccess": "Contrat mis à jour avec succès",
+    "deleteSuccess": "Contrat supprimé avec succès"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "loadFailed": "Échec du chargement des contrats",
+    "loadOneFailed": "Échec du chargement du contrat",
+    "loadOptionsFailed": "Échec du chargement des options"
+  }
+}
