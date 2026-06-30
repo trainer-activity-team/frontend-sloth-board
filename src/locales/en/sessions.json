@@ -1,0 +1,72 @@
+{
+  "list": {
+    "searchPlaceholder": "Search sessions…",
+    "filterAllClasses": "All classes",
+    "filterAllSessionTypes": "All types",
+    "filterAllStatuses": "All statuses",
+    "addButton": "Add session",
+    "columns": {
+      "title": "Title",
+      "date": "Date",
+      "class": "Class",
+      "sessionType": "Type",
+      "status": "Status",
+      "user": "Trainer"
+    },
+    "emptyTitle": "No sessions yet",
+    "emptyDescription": "Create your first session to get started.",
+    "emptyAction": "Add session",
+    "noResultsTitle": "No matching sessions",
+    "noResultsDescription": "Try adjusting your search or filters."
+  },
+  "form": {
+    "titleLabel": "Title",
+    "subjectLabel": "Subject",
+    "dateLabel": "Date",
+    "startLabel": "Start",
+    "endLabel": "End",
+    "classLabel": "Class",
+    "contractLabel": "Contract",
+    "userLabel": "Trainer",
+    "sessionTypeLabel": "Session type",
+    "timescaleLabel": "Timescale",
+    "declarationReferenceLabel": "Declaration reference",
+    "declarationDateLabel": "Declaration date",
+    "classPlaceholder": "Select a class",
+    "contractPlaceholder": "Select a contract",
+    "userPlaceholder": "Select a trainer",
+    "sessionTypePlaceholder": "Select a session type",
+    "timescalePlaceholder": "Select a timescale",
+    "submitCreate": "Create session",
+    "submitUpdate": "Save changes",
+    "cancel": "Cancel",
+    "dangerZoneTitle": "Danger zone",
+    "dangerZoneDescription": "Deleting this session is permanent and cannot be undone.",
+    "deleteButton": "Delete session",
+    "deleteConfirm": "Are you sure you want to delete this session?",
+    "deleteConfirmButton": "Yes, delete",
+    "deleteCancelButton": "Cancel"
+  },
+  "validation": {
+    "titleRequired": "Title is required",
+    "dateRequired": "Date is required",
+    "dateInvalid": "Enter a valid date",
+    "startRequired": "Start time is required",
+    "startInvalid": "Enter a valid start time",
+    "endRequired": "End time is required",
+    "endInvalid": "Enter a valid end time",
+    "endAfterStart": "End time must be after start time",
+    "declarationDateInvalid": "Enter a valid declaration date"
+  },
+  "toast": {
+    "createSuccess": "Session created successfully",
+    "updateSuccess": "Session updated successfully",
+    "deleteSuccess": "Session deleted successfully"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "loadFailed": "Failed to load sessions",
+    "loadOneFailed": "Failed to load session",
+    "loadOptionsFailed": "Failed to load options"
+  }
+}

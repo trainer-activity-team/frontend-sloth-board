@@ -23,6 +23,22 @@ export const queryKeys = {
     lists: () => [...queryKeys.contracts.all, 'list'] as const,
     detail: (id: number) => [...queryKeys.contracts.all, 'detail', id] as const,
   },
+  sessions: {
+    all: ['sessions'] as const,
+    lists: () => [...queryKeys.sessions.all, 'list'] as const,
+    detail: (id: number) => [...queryKeys.sessions.all, 'detail', id] as const,
+  },
+  sessionTypes: {
+    all: ['sessionTypes'] as const,
+    lists: () => [...queryKeys.sessionTypes.all, 'list'] as const,
+    detail: (id: number) =>
+      [...queryKeys.sessionTypes.all, 'detail', id] as const,
+  },
+  timescale: {
+    all: ['timescale'] as const,
+    lists: () => [...queryKeys.timescale.all, 'list'] as const,
+    detail: (id: number) => [...queryKeys.timescale.all, 'detail', id] as const,
+  },
   pricingModes: {
     all: ['pricingModes'] as const,
     lists: () => [...queryKeys.pricingModes.all, 'list'] as const,

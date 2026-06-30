@@ -3,7 +3,8 @@
     "dashboard": "Dashboard",
     "institutions": "Institutions",
     "classes": "Classes",
-    "contracts": "Contracts"
+    "contracts": "Contracts",
+    "sessions": "Sessions"
   },
   "header": {
     "searchPlaceholder": "Search…",
@@ -22,6 +23,9 @@
     "contracts": "Contracts",
     "contractNew": "New contract",
     "contractEdit": "Edit contract",
+    "sessions": "Sessions",
+    "sessionNew": "New session",
+    "sessionEdit": "Edit session",
     "profile": "Profile"
   },
   "theme": {

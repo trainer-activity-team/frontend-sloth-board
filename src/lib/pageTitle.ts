@@ -37,6 +37,18 @@ export function resolvePageTitleKey(pathname: string): string {
     return 'pages.contractEdit'
   }
 
+  if (pathname === ROUTES.SESSIONS) {
+    return 'pages.sessions'
+  }
+
+  if (pathname === ROUTES.SESSION_NEW) {
+    return 'pages.sessionNew'
+  }
+
+  if (pathname.startsWith(`${ROUTES.SESSIONS}/`)) {
+    return 'pages.sessionEdit'
+  }
+
   if (pathname === ROUTES.DASHBOARD) {
     return 'pages.dashboard'
   }

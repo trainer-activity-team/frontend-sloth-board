@@ -13,6 +13,8 @@ import institutionsEn from '../locales/en/institutions.json'
 import institutionsFr from '../locales/fr/institutions.json'
 import profileEn from '../locales/en/profile.json'
 import profileFr from '../locales/fr/profile.json'
+import sessionsEn from '../locales/en/sessions.json'
+import sessionsFr from '../locales/fr/sessions.json'
 
 const LANGUAGE_KEY = 'app_language'
 
@@ -33,6 +35,7 @@ void i18n.use(initReactI18next).init({
       institutions: institutionsFr,
       classes: classesFr,
       contracts: contractsFr,
+      sessions: sessionsFr,
       profile: profileFr,
     },
     en: {
@@ -41,6 +44,7 @@ void i18n.use(initReactI18next).init({
       institutions: institutionsEn,
       classes: classesEn,
       contracts: contractsEn,
+      sessions: sessionsEn,
       profile: profileEn,
     },
   },

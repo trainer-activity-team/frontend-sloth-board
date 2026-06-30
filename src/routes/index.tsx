@@ -12,6 +12,8 @@ import { InstitutionsPage } from '../pages/InstitutionsPage'
 import { LoginPage } from '../pages/LoginPage'
 import { ProfilePage } from '../pages/ProfilePage'
 import { RegisterPage } from '../pages/RegisterPage'
+import { SessionFormPage } from '../pages/SessionFormPage'
+import { SessionsPage } from '../pages/SessionsPage'
 import { GuestRoute } from './GuestRoute'
 import { ProtectedRoute } from './ProtectedRoute'
 
@@ -44,6 +46,9 @@ export const router = createBrowserRouter([
           { path: ROUTES.CONTRACTS, element: <ContractsPage /> },
           { path: ROUTES.CONTRACT_NEW, element: <ContractFormPage /> },
           { path: ROUTES.CONTRACT_DETAIL, element: <ContractFormPage /> },
+          { path: ROUTES.SESSIONS, element: <SessionsPage /> },
+          { path: ROUTES.SESSION_NEW, element: <SessionFormPage /> },
+          { path: ROUTES.SESSION_DETAIL, element: <SessionFormPage /> },
           { path: ROUTES.PROFILE, element: <ProfilePage /> },
           { path: '/', element: <Navigate to={ROUTES.DASHBOARD} replace /> },
         ],

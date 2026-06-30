@@ -3,7 +3,8 @@
     "dashboard": "Tableau de bord",
     "institutions": "Établissements",
     "classes": "Classes",
-    "contracts": "Contrats"
+    "contracts": "Contrats",
+    "sessions": "Sessions"
   },
   "header": {
     "searchPlaceholder": "Rechercher…",
@@ -22,6 +23,9 @@
     "contracts": "Contrats",
     "contractNew": "Nouveau contrat",
     "contractEdit": "Modifier le contrat",
+    "sessions": "Sessions",
+    "sessionNew": "Nouvelle session",
+    "sessionEdit": "Modifier la session",
     "profile": "Mon profil"
   },
   "theme": {

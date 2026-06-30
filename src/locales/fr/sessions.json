@@ -1,0 +1,72 @@
+{
+  "list": {
+    "searchPlaceholder": "Rechercher des sessions…",
+    "filterAllClasses": "Toutes les classes",
+    "filterAllSessionTypes": "Tous les types",
+    "filterAllStatuses": "Tous les statuts",
+    "addButton": "Ajouter une session",
+    "columns": {
+      "title": "Titre",
+      "date": "Date",
+      "class": "Classe",
+      "sessionType": "Type",
+      "status": "Statut",
+      "user": "Intervenant"
+    },
+    "emptyTitle": "Aucune session",
+    "emptyDescription": "Créez votre première session pour commencer.",
+    "emptyAction": "Ajouter une session",
+    "noResultsTitle": "Aucune session correspondante",
+    "noResultsDescription": "Essayez de modifier votre recherche ou vos filtres."
+  },
+  "form": {
+    "titleLabel": "Titre",
+    "subjectLabel": "Matière",
+    "dateLabel": "Date",
+    "startLabel": "Début",
+    "endLabel": "Fin",
+    "classLabel": "Classe",
+    "contractLabel": "Contrat",
+    "userLabel": "Intervenant",
+    "sessionTypeLabel": "Type de session",
+    "timescaleLabel": "Échelle de temps",
+    "declarationReferenceLabel": "Référence de déclaration",
+    "declarationDateLabel": "Date de déclaration",
+    "classPlaceholder": "Sélectionner une classe",
+    "contractPlaceholder": "Sélectionner un contrat",
+    "userPlaceholder": "Sélectionner un intervenant",
+    "sessionTypePlaceholder": "Sélectionner un type de session",
+    "timescalePlaceholder": "Sélectionner une échelle de temps",
+    "submitCreate": "Créer la session",
+    "submitUpdate": "Enregistrer",
+    "cancel": "Annuler",
+    "dangerZoneTitle": "Zone de danger",
+    "dangerZoneDescription": "La suppression de cette session est définitive et irréversible.",
+    "deleteButton": "Supprimer la session",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette session ?",
+    "deleteConfirmButton": "Oui, supprimer",
+    "deleteCancelButton": "Annuler"
+  },
+  "validation": {
+    "titleRequired": "Le titre est requis",
+    "dateRequired": "La date est requise",
+    "dateInvalid": "Entrez une date valide",
+    "startRequired": "L'heure de début est requise",
+    "startInvalid": "Entrez une heure de début valide",
+    "endRequired": "L'heure de fin est requise",
+    "endInvalid": "Entrez une heure de fin valide",
+    "endAfterStart": "L'heure de fin doit être postérieure à l'heure de début",
+    "declarationDateInvalid": "Entrez une date de déclaration valide"
+  },
+  "toast": {
+    "createSuccess": "Session créée avec succès",
+    "updateSuccess": "Session mise à jour avec succès",
+    "deleteSuccess": "Session supprimée avec succès"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "loadFailed": "Échec du chargement des sessions",
+    "loadOneFailed": "Échec du chargement de la session",
+    "loadOptionsFailed": "Échec du chargement des options"
+  }
+}
