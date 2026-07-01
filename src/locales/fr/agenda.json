@@ -1,0 +1,48 @@
+{
+  "header": {
+    "eyebrow": "Agenda",
+    "today": "Aujourd'hui",
+    "create": "Créer"
+  },
+  "views": {
+    "day": "Jour",
+    "week": "Semaine",
+    "month": "Mois"
+  },
+  "filters": {
+    "dateLabel": "Filtrer par date",
+    "clear": "Retirer le filtre"
+  },
+  "empty": {
+    "title": "Aucune session prévue",
+    "description": "Créez une session ou changez de période pour afficher l'agenda."
+  },
+  "create": {
+    "title": "Créer une session",
+    "description": "Renseignez seulement les informations essentielles pour planifier rapidement.",
+    "close": "Fermer",
+    "titleLabel": "Titre",
+    "dateLabel": "Date",
+    "startLabel": "Début",
+    "endLabel": "Fin",
+    "cancel": "Annuler",
+    "submit": "Créer la session"
+  },
+  "validation": {
+    "titleRequired": "Le titre est requis",
+    "dateRequired": "La date est requise",
+    "dateInvalid": "Entrez une date valide",
+    "startRequired": "L'heure de début est requise",
+    "startInvalid": "Entrez une heure de début valide",
+    "endRequired": "L'heure de fin est requise",
+    "endInvalid": "Entrez une heure de fin valide",
+    "endAfterStart": "L'heure de fin doit être postérieure à l'heure de début"
+  },
+  "toast": {
+    "createSuccess": "Session créée avec succès"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "loadFailed": "Échec du chargement de l'agenda"
+  }
+}

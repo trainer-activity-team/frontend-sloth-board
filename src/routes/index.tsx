@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 import { AppLayout } from '../components/AppLayout'
 import { AuthLayout } from '../components/AuthLayout'
 import { ROUTES } from '../lib/routes'
+import { AgendaPage } from '../pages/AgendaPage'
 import { ClassFormPage } from '../pages/ClassFormPage'
 import { ClassesPage } from '../pages/ClassesPage'
 import { ContractFormPage } from '../pages/ContractFormPage'
@@ -46,6 +47,7 @@ export const router = createBrowserRouter([
           { path: ROUTES.CONTRACTS, element: <ContractsPage /> },
           { path: ROUTES.CONTRACT_NEW, element: <ContractFormPage /> },
           { path: ROUTES.CONTRACT_DETAIL, element: <ContractFormPage /> },
+          { path: ROUTES.AGENDA, element: <AgendaPage /> },
           { path: ROUTES.SESSIONS, element: <SessionsPage /> },
           { path: ROUTES.SESSION_NEW, element: <SessionFormPage /> },
           { path: ROUTES.SESSION_DETAIL, element: <SessionFormPage /> },

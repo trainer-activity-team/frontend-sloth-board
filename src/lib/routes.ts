@@ -11,6 +11,7 @@ export const ROUTES = {
   CONTRACTS: '/contracts',
   CONTRACT_NEW: '/contracts/new',
   CONTRACT_DETAIL: '/contracts/:id',
+  AGENDA: '/agenda',
   SESSIONS: '/sessions',
   SESSION_NEW: '/sessions/new',
   SESSION_DETAIL: '/sessions/:id',

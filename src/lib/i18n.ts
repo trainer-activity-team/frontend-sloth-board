@@ -1,6 +1,8 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
+import agendaEn from '../locales/en/agenda.json'
+import agendaFr from '../locales/fr/agenda.json'
 import appEn from '../locales/en/app.json'
 import appFr from '../locales/fr/app.json'
 import authEn from '../locales/en/auth.json'
@@ -35,6 +37,7 @@ void i18n.use(initReactI18next).init({
       institutions: institutionsFr,
       classes: classesFr,
       contracts: contractsFr,
+      agenda: agendaFr,
       sessions: sessionsFr,
       profile: profileFr,
     },
@@ -44,6 +47,7 @@ void i18n.use(initReactI18next).init({
       institutions: institutionsEn,
       classes: classesEn,
       contracts: contractsEn,
+      agenda: agendaEn,
       sessions: sessionsEn,
       profile: profileEn,
     },

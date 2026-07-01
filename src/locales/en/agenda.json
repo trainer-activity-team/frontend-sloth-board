@@ -1,0 +1,48 @@
+{
+  "header": {
+    "eyebrow": "Agenda",
+    "today": "Today",
+    "create": "Create"
+  },
+  "views": {
+    "day": "Day",
+    "week": "Week",
+    "month": "Month"
+  },
+  "filters": {
+    "dateLabel": "Filter by date",
+    "clear": "Clear filter"
+  },
+  "empty": {
+    "title": "No planned sessions",
+    "description": "Create a session or change the period to display the agenda."
+  },
+  "create": {
+    "title": "Create a session",
+    "description": "Fill in only the essentials to schedule quickly.",
+    "close": "Close",
+    "titleLabel": "Title",
+    "dateLabel": "Date",
+    "startLabel": "Start",
+    "endLabel": "End",
+    "cancel": "Cancel",
+    "submit": "Create session"
+  },
+  "validation": {
+    "titleRequired": "Title is required",
+    "dateRequired": "Date is required",
+    "dateInvalid": "Enter a valid date",
+    "startRequired": "Start time is required",
+    "startInvalid": "Enter a valid start time",
+    "endRequired": "End time is required",
+    "endInvalid": "Enter a valid end time",
+    "endAfterStart": "End time must be after start time"
+  },
+  "toast": {
+    "createSuccess": "Session created successfully"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "loadFailed": "Failed to load the agenda"
+  }
+}

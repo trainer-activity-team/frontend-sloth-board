@@ -2,6 +2,7 @@ import {
   FiBookOpen,
   FiBriefcase,
   FiCalendar,
+  FiClock,
   FiFileText,
   FiGrid,
 } from 'react-icons/fi'
@@ -27,6 +28,11 @@ export const navItems = [
     to: ROUTES.CONTRACTS,
     labelKey: 'nav.contracts',
     icon: FiFileText,
+  },
+  {
+    to: ROUTES.AGENDA,
+    labelKey: 'nav.agenda',
+    icon: FiClock,
   },
   {
     to: ROUTES.SESSIONS,

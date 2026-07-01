@@ -4,6 +4,7 @@
     "institutions": "Institutions",
     "classes": "Classes",
     "contracts": "Contracts",
+    "agenda": "Agenda",
     "sessions": "Sessions"
   },
   "header": {
@@ -23,6 +24,7 @@
     "contracts": "Contracts",
     "contractNew": "New contract",
     "contractEdit": "Edit contract",
+    "agenda": "Agenda",
     "sessions": "Sessions",
     "sessionNew": "New session",
     "sessionEdit": "Edit session",

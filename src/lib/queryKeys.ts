@@ -28,6 +28,11 @@ export const queryKeys = {
     lists: () => [...queryKeys.sessions.all, 'list'] as const,
     detail: (id: number) => [...queryKeys.sessions.all, 'detail', id] as const,
   },
+  agenda: {
+    all: ['agenda'] as const,
+    lists: () => [...queryKeys.agenda.all, 'list'] as const,
+    byDate: (date: string) => [...queryKeys.agenda.all, 'date', date] as const,
+  },
   sessionTypes: {
     all: ['sessionTypes'] as const,
     lists: () => [...queryKeys.sessionTypes.all, 'list'] as const,
