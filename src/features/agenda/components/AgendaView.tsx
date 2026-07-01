@@ -16,6 +16,10 @@ import { QuickSessionCreateModal } from './QuickSessionCreateModal'
 type AgendaMode = 'day' | 'week' | 'month'
 
 const HOURS = Array.from({ length: 15 }, (_, index) => index + 7)
+const HOUR_HEIGHT_PX = 80
+const MIN_SESSION_HEIGHT_PX = 28
+const DAY_START_MINUTES = HOURS[0] * 60
+const DAY_END_MINUTES = (HOURS[HOURS.length - 1] + 1) * 60
 
 function startOfDay(date: Date): Date {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate())
@@ -74,8 +78,40 @@ function formatSessionTime(value: string): string {
   return value.slice(11, 16)
 }
 
-function getSessionStartHour(session: Session): number {
-  return Number.parseInt(formatSessionTime(session.start).slice(0, 2), 10)
+function getTimeInMinutes(value: string): number | null {
+  const time = formatSessionTime(value)
+
+  if (!/^\d{2}:\d{2}$/.test(time)) {
+    return null
+  }
+
+  const [hours, minutes] = time.split(':').map(Number)
+
+  return hours * 60 + minutes
+}
+
+function getSessionLayout(session: Session): { top: number; height: number } | null {
+  const startMinutes = getTimeInMinutes(session.start)
+  const endMinutes = getTimeInMinutes(session.end)
+
+  if (startMinutes === null || endMinutes === null || endMinutes <= startMinutes) {
+    return null
+  }
+
+  const visibleStart = Math.max(startMinutes, DAY_START_MINUTES)
+  const visibleEnd = Math.min(endMinutes, DAY_END_MINUTES)
+
+  if (visibleEnd <= visibleStart) {
+    return null
+  }
+
+  return {
+    top: ((visibleStart - DAY_START_MINUTES) / 60) * HOUR_HEIGHT_PX,
+    height: Math.max(
+      ((visibleEnd - visibleStart) / 60) * HOUR_HEIGHT_PX,
+      MIN_SESSION_HEIGHT_PX,
+    ),
+  }
 }
 
 function getSessionColorClass(session: Session): string {
@@ -183,10 +219,16 @@ function getRangeLabel(mode: AgendaMode, date: Date): string {
 interface SessionPillProps {
   session: Session
   compact?: boolean
+  className?: string
   onClick: (session: Session) => void
 }
 
-function SessionPill({ session, compact = false, onClick }: SessionPillProps) {
+function SessionPill({
+  session,
+  compact = false,
+  className = '',
+  onClick,
+}: SessionPillProps) {
   const timeLabel = `${formatSessionTime(session.start)}-${formatSessionTime(
     session.end,
   )}`
@@ -198,7 +240,7 @@ function SessionPill({ session, compact = false, onClick }: SessionPillProps) {
       onClick={() => onClick(session)}
       className={`w-full rounded-lg px-2 py-1 text-left text-xs font-semibold shadow-sm transition-opacity hover:opacity-90 ${getSessionColorClass(
         session,
-      )}`}
+      )} ${className}`}
     >
       <span className="block truncate">{session.title}</span>
       <span className="block truncate font-normal opacity-90">{timeLabel}</span>
@@ -239,39 +281,66 @@ function TimeGrid({ dates, sessionsByDate, onSessionClick }: TimeGridProps) {
           ))}
         </div>
 
-        {HOURS.map((hour) => (
-          <div
-            key={hour}
-            className={`grid min-h-20 border-b border-border last:border-b-0 ${
-              dates.length === 1 ? 'grid-cols-[72px_1fr]' : 'grid-cols-[72px_repeat(7,1fr)]'
-            }`}
-          >
-            <div className="border-r border-border px-2 py-2 text-right text-xs text-muted">
-              {String(hour).padStart(2, '0')}:00
-            </div>
-            {dates.map((date) => {
-              const dateKey = formatDateKey(date)
-              const hourSessions = (sessionsByDate.get(dateKey) ?? []).filter(
-                (session) => getSessionStartHour(session) === hour,
-              )
-
-              return (
-                <div
-                  key={`${dateKey}-${hour}`}
-                  className="space-y-1 border-r border-border p-1 last:border-r-0"
-                >
-                  {hourSessions.map((session) => (
-                    <SessionPill
-                      key={session.id}
-                      session={session}
-                      onClick={onSessionClick}
-                    />
-                  ))}
-                </div>
-              )
-            })}
+        <div
+          className={`grid ${
+            dates.length === 1 ? 'grid-cols-[72px_1fr]' : 'grid-cols-[72px_repeat(7,1fr)]'
+          }`}
+        >
+          <div>
+            {HOURS.map((hour) => (
+              <div
+                key={hour}
+                className="h-20 border-r border-b border-border px-2 py-2 text-right text-xs text-muted last:border-b-0"
+              >
+                {String(hour).padStart(2, '0')}:00
+              </div>
+            ))}
           </div>
-        ))}
+          {dates.map((date) => {
+            const dateKey = formatDateKey(date)
+            const daySessions = sessionsByDate.get(dateKey) ?? []
+
+            return (
+              <div
+                key={dateKey}
+                className="relative border-r border-border last:border-r-0"
+              >
+                {HOURS.map((hour) => (
+                  <div
+                    key={`${dateKey}-${hour}`}
+                    className="h-20 border-b border-border last:border-b-0"
+                  />
+                ))}
+                <div className="absolute inset-0">
+                  {daySessions.map((session) => {
+                    const layout = getSessionLayout(session)
+
+                    if (!layout) {
+                      return null
+                    }
+
+                    return (
+                      <div
+                        key={session.id}
+                        className="absolute left-1 right-1"
+                        style={{
+                          top: `${layout.top}px`,
+                          height: `${layout.height}px`,
+                        }}
+                      >
+                        <SessionPill
+                          session={session}
+                          className="h-full overflow-hidden"
+                          onClick={onSessionClick}
+                        />
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
